@@ -1,0 +1,41 @@
+// rockpi-mikroe-506-overlay.dts
+/dts-v1/;
+/plugin/;
+
+/ {
+
+    compatible = "rockchip,rockpi","rockchip,rk3399";
+
+    fragment@0 {
+        target = <&i2s1>;
+        __overlay__ {
+            status = "okay";
+        };
+    };  
+
+    fragment@1 {
+        target = <&i2c7>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+            status = "okay";
+
+            wm8731@1a {
+                #sound-dai-cells = <0>;
+                compatible = "wlf,wm8731";
+                reg = <0x1a>;
+                status = "okay";
+            };
+        };
+    };  
+
+    fragment@2 {
+        target-path = "/sound-ext-card";
+        __overlay__ {
+            compatible = "mikroe,506";
+            i2s-controller = <&i2s1>;
+            status = "okay";
+        };
+    };  
+
+};
