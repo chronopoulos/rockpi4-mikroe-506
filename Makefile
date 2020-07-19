@@ -1,4 +1,4 @@
-SRCS = mikroe-506.c
+SRCS = mikroe-506.c wm8731.c
 
 #DTC = dtc   # must be >= 1.6.0
 DTC = /home/linaro/software/dtc/dtc   # must be >= 1.6.0
@@ -9,6 +9,7 @@ DTBO = rockpi-mikroe-506.dtbo
 OVERLAY_DIR = /boot/overlays
 
 obj-m += mikroe-506.o
+obj-m += wm8731.o
 
 ####
 
