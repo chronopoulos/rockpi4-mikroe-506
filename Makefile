@@ -31,4 +31,4 @@ install:
 
 clean:
 	make -C $(KERNEL_BUILD_DIR) M=$(PWD) clean
-	rm $(DTBO)
+	rm -f $(DTBO)
