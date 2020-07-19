@@ -1,3 +1,9 @@
 *.o
 *.ko
 *.dtbo
+.*.cmd
+*.symvers
+*.mod.c
+*.swp
+modules.order
+.tmp_versions/
