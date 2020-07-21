@@ -1,7 +1,6 @@
 # rockpi4-mikroe-506
 ASoC driver and device tree overlay for the Mikroe-506 (WM8731 board) on
-RockPi4. It has been confirmed to work on the 4.4.154-90 kernel, as well as
-4.4.154-108.
+RockPi4. It has been confirmed to work on the 4.4.154-90 kernel.
 
 ## Notes
 If you try and build these drivers against the kernel tree shipped by Radxa,
