@@ -50,3 +50,32 @@ sound cards:
 ```
 aplay -l
 ```
+
+If that looks good, then configure the sound card parameters for input and
+output:
+
+```
+alsamixer
+```
+
+Press F6, select sndmikroe506, then press F5 for all controls, and:
+
+* enable item 'Mic' (space)
+* set item 'Mic Boost' to 100 (up arrow key)
+* enable item 'Playback Deemphasis' (m key)
+* disable item 'ADC High Pass Filter' (m key)
+* set item 'Input Mux' to Mic (arrow keys)
+* enable item 'Output Mixer HiFi' (m key)
+
+Escape to exit, now test output:
+
+```
+aplay -D hw:2,0 mySong.wav
+```
+
+and mic input:
+
+```
+arecord -D hw:1,0 -r 48000 -f S16_LE -d 5 -c 2 myRecoring.wav
+```
+
