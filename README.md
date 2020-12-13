@@ -38,8 +38,9 @@ SCL         <-->  Pin 5
 GND         <-->  Pin 6
 ```
 
-Then, to enable the overlay, add the following line to `/boot/hw_intf.conf`:
+Then, to enable the overlay, add the following lines to `/boot/hw_intf.conf`:
 ```
+intfc:i2c7=on
 intfc:dtoverlay=rockpi-mikroe-506
 ```
 

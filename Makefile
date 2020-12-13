@@ -28,6 +28,7 @@ overlay: $(DTS)
 install:
 	cp $(SRCS:c=ko) $(KERNEL_KO_DIR)
 	cp $(DTBO) $(OVERLAY_DIR)
+	depmod -a
 
 clean:
 	make -C $(KERNEL_BUILD_DIR) M=$(PWD) clean
